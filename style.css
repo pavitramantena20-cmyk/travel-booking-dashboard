@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #f4f4f4;
+}
+
+/* Header */
+header{
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Search Box */
+.search-box{
+    text-align: center;
+    margin: 30px;
+}
+
+.search-box input{
+    padding: 10px;
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.search-box button{
+    padding: 10px 15px;
+    border: none;
+    background: #0077b6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cards */
+.cards-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card{
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card h2{
+    margin-bottom: 10px;
+}
+
+.card p{
+    margin-bottom: 15px;
+}
+
+.card button{
+    padding: 10px 15px;
+    border: none;
+    background: #00b4d8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background: #0077b6;
+}
+<section class="cards-container">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Goa">
+        <h2>Goa</h2>
+        <p>Beach paradise in India</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400" alt="Kerala">
+        <h2>Kerala</h2>
+        <p>Backwaters & nature beauty</p>
+        <button>Book Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" alt="Manali">
+        <h2>Manali</h2>
+        <p>Snow mountains adventure</p>
+        <button>Book Now</button>
+    </div>
+
+</section>
+.dark-btn{
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark{
+    background: #121212;
+    color: white;
+}
+
+.dark .card{
+    background: #1e1e1e;
+    color: white;
+}
+footer{
+    background: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+@media(max-width: 768px){
+
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .search-box button{
+        width: 90%;
+    }
+
+    .card{
+        width: 90%;
+    }
+}
+#loader{
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #0077b6;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+#content{
+    display: none;
+}
+#topBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 50px;
+    background: #0077b6;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+}
+
+#topBtn:hover{
+    background: #023e8a;
+}
+.booking-form{
+    background: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.booking-form h2{
+    margin-bottom: 20px;
+}
+
+.booking-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input,
+.booking-form select{
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.booking-form button{
+    padding: 12px;
+    border: none;
+    background: #0077b6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-form button:hover{
+    background: #023e8a;
+}
+.popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.popup-content button{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #0077b6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navbar{
+    background: #023e8a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover{
+    color: #90e0ef;
+}
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.hero{
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content{
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hero-content h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content button{
+    padding: 12px 20px;
+    border: none;
+    background: #00b4d8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-content button:hover{
+    background: #0077b6;
+}
+@media(max-width: 768px){
+
+    .hero{
+        height: 300px;
+        padding: 20px;
+    }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p{
+        font-size: 16px;
+    }
+}
+.rating{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: gold;
+}
+.card{
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.slider{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact{
+    background: #ffffff;
+    margin: 40px auto;
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contact h2{
+    margin-bottom: 15px;
+}
+
+.contact p{
+    margin: 10px 0;
+    font-size: 18px;
+}
+.dark .con.testimonials{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.testimonials h2{
+    margin-bottom: 30px;
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card{
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.testimonial-card p{
+    margin-bottom: 15px;
+}tact{
+    background: #1e1e1e;
+    color: white;
+}
+.dark .testimonial-card{
+    background: #1e1e1e;
+    color: white;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Popup Message -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Booking Successful ✈️</h2>
+
+        <p>Your trip has been booked successfully.</p>
+
+        <button onclick="closePopup()">
+            OK
+        </button>
+
+    </div>
+
+</div>
+<body>
+  <div id="loader"></div>
+
+<div id="content">
+    <nav class="navbar">
+
+    <h2 class="logo">TravelGo ✈️</h2>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Bookings</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</nav> 
+ <!-- Image Slider -->
+
+<section class="slider">
+
+    <img id="slideImage"
+         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200"
+         alt="Travel Image">
+
+</section>
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Explore The World 🌍</h1>
+
+        <p>
+            Book your dream destinations with us
+        </p>
+
+        <button>
+            Explore Now
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- Header -->
+    <header>
+    <h1>Travel Booking Dashboard ✈️</h1>
+    <button onclick="darkMode()" class="dark-btn">
+        Dark Mode
+    </button>
+</header>
+    <!-- Search Section -->
+    <section class="search-box">
+        <input type="text" 
+       id="searchInput"
+       placeholder="Search destinations...">
+        <button>Search</button>
+    </section>
+
+    <!-- Main Content -->
+    <section class="cards-container">
+
+   <div class="card" data-name="Goa">
+        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400" alt="Goa">
+        <h2>Goa</h2>
+        <p>Beach paradise in India</p>
+        <div class="rating">
+    ⭐⭐⭐⭐⭐
+</div>
+        <button>Book Now</button>
+    </div>
+
+   <div class="card" data-name="Kerala">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400" alt="Kerala">
+        <h2>Kerala</h2>
+        <p>Backwaters & nature beauty</p>
+        <div class="rating">
+    ⭐⭐⭐⭐⭐
+</div>
+        <button>Book Now</button>
+    </div>
+
+   <div class="card" data-name="Manali">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400" alt="Manali">
+        <h2>Manali</h2>
+        <p>Snow mountains adventure</p>
+        <div class="rating">
+    ⭐⭐⭐⭐⭐
+</div>
+        <button>Book Now</button>
+    </div>
+
+</section>
+<!-- Testimonials -->
+
+<section class="testimonials">
+
+    <h2>What Our Customers Say ⭐</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <p>
+                "Amazing travel experience with TravelGo!"
+            </p>
+
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Best booking service and beautiful destinations."
+            </p>
+
+            <h4>- Sneha</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p>
+                "Easy booking and great customer support."
+            </p>
+
+            <h4>- Arjun</h4>
+        </div>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="contact">
+
+    <h2>Contact Us 📞</h2>
+
+    <p>Email: travelgo@gmail.com</p>
+
+    <p>Phone: +91 9876543210</p>
+
+    <p>Location: India</p>
+
+</section>
+<footer>
+    <p>© 2026 Travel Booking Dashboard | Designed by You ✈️</p>
+</footer>
+<section class="booking-form">
+
+    <h2>Book Your Trip ✈️</h2>
+
+    <form>
+
+        <input type="text" placeholder="Enter Your Name" required>
+
+        <input type="email" placeholder="Enter Your Email" required>
+
+        <select>
+            <option>Select Destination</option>
+            <option>Goa</option>
+            <option>Kerala</option>
+            <option>Manali</option>
+        </select>
+
+        <input type="date">
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</section>
+<button id="topBtn" onclick="topFunction()">
+    ↑ Top
+</button>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
